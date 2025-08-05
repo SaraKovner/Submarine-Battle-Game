@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>קרב הצוללות</title>
+    <!-- לשאול את אפרת איך עושים את הלוגו בכרטיסיה למעלה -->
+    <script src="../JS/sub.js"></script>
+    <script src="../JS/game.js"></script>
+    <script src="../JS/board.js"></script>
+    <script src="../JS/instructions.js"></script>
+    <link href="../CSS/game.css" rel="stylesheet"/>
+    <link href="../CSS/prisaGame.css" rel="stylesheet"/>
+    <link href="../CSS/instructions.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon"/>
+</head>
+<body onload="newGame()" dir="ltr" id="body">
+    <img src="../img/לוגו.png" alt="קרב הצוללות" id="logo">
+    <div class="prisa">
+        <nav class="nav" dir="rtl">
+            <button class="btn_in_nav" id="user" onclick="funcList()"><img src="../img/user1.png" width="20px" height="18px"/>  <span id="User1"></span></button>
+            <!-- <button class="btn_in_nav" onclick="LogOff()">התנתקות</button>
+            <button class="btn_in_nav" onclick="gameNew()">משחק חדש</button> -->
+            <button class="btn_in_nav" onclick="instructions()">הוראות המשחק</button>
+            <button class="btn_in_nav" onclick=""> <img src="../img/volume-off1.png" width="20px" height="20px"/> </button>
+            <button class="btn_in_nav" onclick="startGame()" id="btn_start">  <img src="../img/player-play (1).png" width="20px" height="20px" id="img_start"/>  </button>
+        </nav>
+        <header class="header">
+            <div id="list">
+                <button id="btn1" onclick="LogOff()">התנתקות</button>
+                <button id="btn2" onclick="gameNew()">משחק חדש</button>
+            </div>
+        </header>
+        <aside class="aside">
+            <center>
+                <div id="my_board">
+                    <center><h3 id="your_tor" style="color: rgba(255, 255, 255, 0); background-color: rgba(255, 255, 255, 0);">תורך</h3></center>
+                </div>
+            </center>
+            <center>
+                <div id="c_board" hidden="true">
+                    <center><h3 id="c_tor">תור היריב</h3></center>
+                </div>
+            </center>
+            <!-- פה יהיה לוח המשחק בעצמו -->
+        </aside>
+        <article class="article">
+            <!-- <br/> -->
+            <h3 style="color: rgba(255, 255, 255, 0);">/</h3>
+            <div id="sub_manu">
+                <!-- מצב הצוללות של המחשב-כלומר הצוללות שהשחקן מנסה לגלות -->
+                <div id="your_sub">
+                    <center><h3><span id="User2"></span> הצוללות של</h3></center>
+                    <div id="your_sub_">
+                        <div id="your_sub_2"></div>
+                        <div id="your_sub_1"></div>
+                        <div id="your_sub_0"></div>
+                    </div>
+                </div>
+                <!-- <br/> -->
+                <!-- המחשב מצב הצוללות של השחקן -->
+                <div id="c_sub">
+                <center><h3>הצוללות של היריב</h3></center>
+                    <div id="c_sub_">
+                        <div id="c_sub_2"></div>
+                        <div id="c_sub_1"></div>
+                        <div id="c_sub_0"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <footer class="footer">
+            © saraKovner  
+        </footer>
+        <div id="popupOverlay" class="overlay-container"></div>
+        <div id="popupOverlay_win" class="overlay-container-win"></div>
+        <div id="popupOverlay_lost" class="overlay-container-lost"></div>
+    </div>
+</body>
+</html>

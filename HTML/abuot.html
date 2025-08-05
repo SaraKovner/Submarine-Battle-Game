@@ -1,0 +1,89 @@
+<!-- <!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>השמעת צליל</title>
+</head>
+<body>
+
+<button id="play-sound">השמע צליל</button>
+
+<script>
+    document.getElementById('play-sound').addEventListener('click', function() {
+        var audio = new Audio('../Audio/Do You Want.mp3'); // הכנס את הנתיב לקובץ הצליל שלך
+        audio.play();
+    });
+</script>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #buttonsList 
+    {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    #buttonsList button 
+    {
+        display: block;
+        margin-bottom: 5px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    #buttonsList button:hover 
+    {
+        background-color: #2980b9;
+    }
+    #buttonsList
+    {
+        position: absolute;
+        bottom: 20px;  /* מרווח למעלה מהתחתית */
+        left: 50%;  /* ממרכז האמצעי של העמוד */
+        transform: translateX(-50%);  /* כדי להעמיד את הרשימה במרכז אופקיו של העמוד */
+    }
+</style>
+<script>
+    function func()
+    {
+        // const mainButton = document.getElementById("mainButton");
+        const buttonsList = document.getElementById("buttonsList");
+        if (buttonsList.style.display == "none")
+        {
+            buttonsList.style.display = "block";
+        }
+        else 
+        {
+            buttonsList.style.display = "none";
+        }
+    }
+</script>
+<body>
+    <button id="mainButton" onclick="func()">הצג רשימה</button>
+    <div id="buttonsList" style="display: none;">
+        <button>כפתון ראשון</button>
+        <button>כפתון שני</button>
+        <button>כפתון שלישי</button>
+    </div>
+</body>
+</html>
+
+
+

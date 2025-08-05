@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>קרב הצוללות</title>
+    <script src="../JS/sub.js"></script>
+    <script src="../JS/board.js"></script>
+    <script src="../JS/before_game.js"></script>
+    <script src="../JS/instructions.js"></script>
+    <link href="../CSS/prisa.css" rel="stylesheet"/>
+    <link href="../CSS/before_game.css" rel="stylesheet"/>
+    <link href="../CSS/instructions.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon"/>
+</head>
+<body onload="start()" id="before_game">
+    <img id="logo" src="../img/לוגו.png" alt="קרב הצוללות">
+    <div class="prisa">
+        <nav class="nav" dir="rtl">
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp; -->
+            <button class="btn_in_nav" id="user" onclick="funcList()"><img src="../img/user1.png" width="20px" height="20px"/>  <span id="User"></span></button>
+            <button class="btn_in_nav" onclick="instructions()">הוראות המשחק</button>
+            <button class="btn_in_nav" onclick=""> <img src="../img/volume-off1.png" width="20px" height="20px"/> </button>
+        </nav>
+        <header class="header">
+            <div id="list">
+                <button id="btn1" onclick="LogOff()">התנתקות</button>
+                <button id="btn2" onclick="gameNew()">משחק חדש</button>
+            </div>
+            <!-- <center>
+                <h2>ברוכים הבאים למשחק קרב הצוללות!!!</h2>
+                <h3>לפניכם הלוח שלכם, סדרו אותו ולאחר מכן תעברו למשחק...</h3>
+            </center> -->
+        </header>
+        <article class="aside">
+            <br/><br/><br/>
+            <center>
+                <div id="board">
+                    
+                </div>
+            </center>
+        </article>
+        <aside class="article">
+            <br/><br/><br/>
+            <center>
+                <div id="submarineMenu">
+                    <br/>
+                    <button id="0" class="d" onclick="direction()"><img id="0" src="../img/arrow-narrow-down1.png" width="30px" height="30px"/></button>
+                    <button id="1" class="d" onclick="direction()"><img id="1" src="../img/arrow-narrow-right1.png" width="30px" height="30px"/></button><br/><br/>
+                    <div id="imgS">
+                        <!-- להעביר את זה js וגם לשנות בפונקציה של הריסטארט את הגילוי לכל אחת מהתמונות בנפרד -->
+                        <button data-number="1" onclick="lengthSub()"><img id="S51" data-S="5" src="../img/submarine.png" width="126px" height="52px"/></button><br/>
+                        <button data-number="1" onclick="lengthSub()"><img id="S41" data-S="4" src="../img/submarine.png" width="99px" height="41px"/></button><br/>
+                        <button data-number="1" onclick="lengthSub()"><img id="S31" data-S="3" src="../img/submarine.png" width="81px" height="36px"/></button>
+                        <button data-number="2" onclick="lengthSub()"><img id="S32" data-S="3" src="../img/submarine.png" width="81px" height="36px"/></button><br/>
+                        <button data-number="1" onclick="lengthSub()"><img id="S21" data-S="2" src="../img/submarine.png" width="63px" height="32px"/></button>
+                        <button data-number="2" onclick="lengthSub()"><img id="S22" data-S="2" src="../img/submarine.png" width="63px" height="32px"/></button><br/>
+                        <button data-number="3" onclick="lengthSub()"><img id="S23" data-S="2" src="../img/submarine.png" width="63px" height="32px"/></button><br/>
+                        <button data-number="1" onclick="lengthSub()"><img id="S11" data-S="1" src="../img/submarine.png" width="45px" height="23px"/></button>
+                        <button data-number="2" onclick="lengthSub()"><img id="S12" data-S="1" src="../img/submarine.png" width="45px" height="23px"/></button><br/>
+                        <button data-number="3" onclick="lengthSub()"><img id="S13" data-S="1" src="../img/submarine.png" width="45px" height="23px"/></button>
+                        <button data-number="4" onclick="lengthSub()"><img id="S14" data-S="1" src="../img/submarine.png" width="45px" height="23px"/></button><br/>
+                    </div> 
+                    <!-- <br/> -->
+                    <!-- <button onclick="back()"><img src="../img/backspace.png" width="30px" height="30px"/></button> -->
+                    <button onclick="restart()" id="restart"><img src="../img/refresh1.png" width="30px" height="30px"/></button>
+                    <br/>
+                    <br/>
+                </div>
+            </center>
+        </aside>
+        <footer class="footer" dir="ltr">
+            © saraKovner  
+        </footer>
+        <div id="popupOverlay" class="overlay-container"></div>
+    </div>
+</body>
+</html>

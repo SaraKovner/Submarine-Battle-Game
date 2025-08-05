@@ -1,0 +1,181 @@
+td>button
+{
+    border: 0;
+    width: 42px;
+    height: 42px;
+    background-color: rgb(230, 221, 221, 0);
+    cursor: pointer;
+    margin: 0px;
+}
+table, td, tr
+{
+    text-align: center;
+    border: 1px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+    /* border-style: solid; */
+    color: rgba(0, 0, 0);
+    background-color: rgb(230, 221, 221, 0.45);
+}
+#c_sub_2>table, #c_sub_1>table, #c_sub_0>table, #your_sub_2>table, #your_sub_1>table, #your_sub_0>table
+{
+    margin-bottom: 7px;
+    margin-top: 7px;
+    margin-left: 25px;
+    /* margin-right: 25px; */
+}
+td
+{
+    width: 15px;
+    height: 15px;
+    background-color: rgb(230, 221, 221, 0);
+}
+#mytable_my_board, #mytable_c_board
+{
+    box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.22);
+}
+#your_sub, #c_sub
+{
+    width: 255px;
+    /* direction: rtl; */
+    font-weight: bold;
+    color: black;
+    font-weight: bold;
+    background-color: rgb(230, 221, 221, 0.76);
+    padding: 2%;
+    border: 1px solid rgb(21, 49, 66);  
+}
+#your_sub
+{
+    border-bottom: none;  
+}
+#c_sub_, #your_sub_
+{
+    /* margin: 2%; */
+    display: flex;
+    flex-wrap: wrap;
+}
+#sub_manu
+{
+    width: 264px;
+    margin-left: 15%;
+    box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.22);
+}
+#your_tor
+{
+    padding: 10px 15px 10px 15px;
+    background-color: rgb(8, 167, 85);
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
+    margin: 10px 40% 10px 40%;
+}
+#c_tor
+{
+    padding: 10px 15px 10px 15px;
+    background-color: rgb(216, 76, 92);
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
+    margin: 10px 40% 10px 40%;
+}
+h3
+{
+    font-size: 117%;
+    color: rgb(21, 49, 66);
+}
+.btn_in_nav
+{
+    padding: 7px 12px 6px 12px;
+    width: auto;
+    height: auto;
+    /* padding: 9px 12px 9px 12px; */
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    border-radius: 15px;
+    margin: 15px 12px 7px 0px;
+    border: 0px;
+    background-color: rgba(21, 49, 66, 0.8);
+    color: #eaeaea;
+    transition: transform 0.5s;
+}
+.btn_in_nav:hover
+{
+    transform: scale(1.05);
+    background-color: rgba(21, 49, 66, 0.5);
+}
+
+/* עיצוב חלונית הניצחון */
+.overlay-container-win, .overlay-container-lost
+{
+    /* קשור חזה האם רואים או לא */
+    display: none;
+    /* עושה את האפור */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    font-family: Arial, sans-serif;
+    color: darkslategray;
+    justify-content: center;
+    align-items: center;
+    /* קשור חזה האם רואים או לא */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+#popup-box-win, #popup-box-lost
+{
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    width: 320px;
+    text-align: center;
+    /* קשור חזה האם רואים או לא */
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+.btn-close-popup-win, .btn-close-popup-lost
+{
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: rgb(6, 148, 173);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    /* גורם לכך שכאשר עוברים על הכפתור תראה יד */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+    /* flex-wrap: wrap; */
+}
+.btn-close-popup-win:hover, .btn-close-popup-lost:hover 
+{
+    background-color: rgb(109, 159, 168);
+}
+
+    /* Keyframes for fadeInUp animation */
+    @keyframes fadeInUp {
+    from {
+        /* הפיכת מצב */
+        opacity: 0;
+        /* העליה האיטית */
+        transform: translateY(20px);
+    }
+
+    to {
+        /* הפיכת מצב */
+        opacity: 1;
+        /* העליה האיטית */
+        transform: translateY(0);
+    }
+}
+/* Animation for popup */
+.overlay-container-win.show , .overlay-container-lost.show 
+{
+    display: flex;
+    opacity: 1;
+}
